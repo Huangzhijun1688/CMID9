@@ -256,8 +256,126 @@ namespace CMID9_DEV
 
         private void But登录_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             MessageBox.Show(_Connection.Main_Str, "Main_Str 的值"); // 显示 Main_Str 的值
 
+=======
+            string 用户ID = this.txt帐号.Text;
+            string 选择的企业 = this.Lis企业列表.SelectedItem?.ToString();
+            string 输入密码明文 = Txt密码.Text; // 获取用户输入的密码明文
+
+            // 检查用户ID和选择的企业是否为空
+            if (string.IsNullOrEmpty(用户ID))
+            {
+                MessageBox.Show("用户ID不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(选择的企业))
+            {
+                MessageBox.Show("请选择企业", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 检查密码是否为空
+            if (string.IsNullOrEmpty(输入密码明文))
+            {
+                MessageBox.Show("密码不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // 退出方法，不继续执行
+            }
+
+            // 调用初始化用户信息方法
+            bool 初始化成功 = 中文类.初始化用户信息(用户ID, 选择的企业);
+
+            if (初始化成功)
+            {
+                // 加密输入的密码
+                string 输入密码暗文 = SecurityHelper.Encrypt(输入密码明文); // 将明文密码加密
+
+                // 比较加密后的密码与用户保存的密码
+                if (输入密码暗文 != _LoadUser.PassWordPC9)
+                {
+                    MessageBox.Show("密码错误", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // 退出方法，不继续执行
+                }
+
+                // 如果密码正确，继续执行
+                if (_LoadUser.Is_Load) // 如果 _LoadUser.Is_Load 为 True
+                {
+                    // 登录系统
+                    MessageBox.Show("登录成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // 你可以在这里添加更多登录成功后的逻辑
+                }
+                else // 如果 _LoadUser.Is_Load 为 False
+                {
+                    // 退出系统
+                    MessageBox.Show("用户未加载，系统将退出。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit(); // 退出应用程序
+                }
+            }
+            else
+            {
+                MessageBox.Show(_Sys.MessT, "初始化失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // 如果初始化成功，检查 _LoadUser.Is_Load 的状态
+            if (_LoadUser.Is_Load) // 如果 _LoadUser.Is_Load 为 True
+            {
+                // 登录系统
+                // 在这里添加登录系统的代码
+                MessageBox.Show("登录成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else // 如果 _LoadUser.Is_Load 为 False
+            {
+                // 退出系统
+                MessageBox.Show("用户未加载，系统将退出。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit(); // 退出应用程序
+            }
+        }
+
+        private void txtVipID_Validated(object sender, EventArgs e)
+        {
+            执行初始化过程(); // 调用执行初始化过程的方法
+        }
+
+
+        private void 执行初始化过程()
+        {
+            // 获取用户ID和选择的企业
+            string 用户ID = this.txt帐号.Text;
+            string 选择的企业 = this.Lis企业列表.SelectedItem?.ToString();
+
+            // 检查用户ID和选择的企业是否为空
+            if (string.IsNullOrEmpty(用户ID))
+            {
+                //MessageBox.Show("用户ID不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(选择的企业))
+            {
+                //MessageBox.Show("请选择企业", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 调用初始化用户信息方法
+            bool 初始化成功 = 中文类.初始化用户信息(用户ID, 选择的企业);
+
+            if (初始化成功)
+            {
+                // 初始化成功后的逻辑处理
+                // 你可以在这里添加其他需要执行的代码
+            }
+            else
+            {
+                MessageBox.Show(_Sys.MessT, "初始化失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Lis企业列表_SelectedValueChanged(object sender, EventArgs e)
+        {
+            执行初始化过程(); // 调用执行初始化过程的方法
+>>>>>>> Stashed changes
         }
         //这里是我修改的
     }
