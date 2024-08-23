@@ -64,3 +64,11 @@ Z:\CMID开发发行\git\CMID90\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.csproj.Co
 Z:\CMID开发发行\git\CMID90\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.csproj.CopyComplete
 Z:\CMID开发发行\git\CMID90\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.exe
 Z:\CMID开发发行\git\CMID90\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.pdb
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.csproj.AssemblyReference.cache
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.系统登录.resources
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.Properties.Resources.resources
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.csproj.GenerateResource.cache
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.exe.licenses
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.csproj.CoreCompileInputs.cache
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.exe
+E:\00_CMID9\Link\CMID9\CMID9_DEV\CMID9_DEV\obj\Debug\CMID9_DEV.pdb
