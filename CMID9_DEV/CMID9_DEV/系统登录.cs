@@ -259,5 +259,6 @@ namespace CMID9_DEV
             MessageBox.Show(_Connection.Main_Str, "Main_Str 的值"); // 显示 Main_Str 的值
 
         }
+        //这里是我修改的
     }
 }
