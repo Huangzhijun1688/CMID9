@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using CMID9_DEV.Models; // 引用包含ConnectionHelper类的命名空间
 
 
+// 我现在改这里,试一下,感觉不对,这是在仓库里启动的项目文件,修改的
+
 namespace CMID9_DEV
 {
     public partial class 系统登录 : DevExpress.XtraEditors.XtraForm
